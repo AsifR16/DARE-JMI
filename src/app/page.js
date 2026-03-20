@@ -7,6 +7,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import Accordion from "./Accordion.jsx";
 import ProjectMarquee from "./ProjectMarquee.jsx";
 import AboutMarquee from "./AboutMarquee.jsx";
+import ShootingText from "./ShootingText.jsx";
 
 export default function Home() {
   return (
@@ -52,7 +53,7 @@ export default function Home() {
             <ul className="text-white text-xl font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="block py-2 px-3 bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
                   aria-current="page"
                 >
@@ -61,7 +62,7 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#projects"
                   className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
                 >
                   Projects
@@ -69,7 +70,7 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#about"
                   className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
                 >
                   About
@@ -77,7 +78,7 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#faqs"
                   className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
                 >
                   FAQs
@@ -85,7 +86,7 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#contact"
                   className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
                 >
                   Contact
@@ -107,14 +108,10 @@ export default function Home() {
         </object>
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
-          <div className="bg-[#1b333b]/10 backdrop-blur">
-            <h1 className="text-[#00E5FF] text-6xl md:text-8xl font-bold drop-shadow-2xl tracking tracking-wide">
-              Learn, Build, Repeat
-            </h1>
-            <p className="text-[#00E5FF] text-xl md:text-2xl mt-4 font-light tracking-wide">
-              The premier Drone and Robotics Electrical Workshop for future
-              engineers.
-            </p>
+          <div className="bg-[#1b333b]/10 backdrop-blur flex flex-col justify-center items-center rounded-xl p-2">
+            <ShootingText text="LEARN, BUILD, REPEAT" className="text-6xl" type="chars"/>
+              <ShootingText text="The premier Drone and Robotics Electrical Workshop for future
+              engineers." className="text-2xl" type="words"/>
           </div>
           <button className="text-white text-2xl rounded-lg pointer-events-auto z-100 bg-[#3529e3] pt-2 pb-2 pr-4 pl-4 mt-10 transition-all ease-in-out delay-100 hover:bg-[#131313] hover:pt-3 hover:pb-3 hover:pr-5 hover:pl-5 hover:cursor-pointer">
             Join Now <HiArrowRight className="inline" />
@@ -126,9 +123,9 @@ export default function Home() {
       <ProjectMarquee />
       {/* PROJECT section ends */}
       {/* About us section */}
-      <div className="w-full h-[700] flex flex-row justify-between mt-50">
+      <div className="w-full h-[700] flex flex-row justify-between mt-50" id="about">
         <div className="w-1/2 text-center flex flex-col items-center">
-          <h1 className="text-[#00E5FF] text-6xl tracking-wide">About Us</h1>
+          <ShootingText text="About Us" className="text-6xl" type="chars"/>
           <div className="text-justify w-4/5 mt-20 text-lg">
             <p className="text-white font-sans tracking-wide">
               DARES is an intensive, high-velocity technical incubator where the
@@ -163,9 +160,9 @@ export default function Home() {
       </div>
       {/* about section ends */}
       {/* faq section */}
-      <div className="w-full h-[500] flex flex-row items-center justify-center mt-15">
+      <div className="w-full h-[500] flex flex-row items-center justify-center mt-15" id="faqs">
         <div className="w-1/2 text-start tracking-wide">
-          <p className="text-[#00E5FF] text-6xl">FAQs.</p>
+          <ShootingText text="FAQs." className="text-6xl" type="chars"/>
           <p className="text-white text-xl mt-5 w-3/4 tracking-wide">
             Answered all frequently asked questions, Still confused? feel free
             to contact us.
@@ -182,9 +179,9 @@ export default function Home() {
       </div>
       {/* faq section ends */}
       {/* contact section */}
-      <div className="flex flex-row justify-around mt-40">
+      <div className="flex flex-row justify-around mt-40" id="contact">
         <div className="w-1/2 flex flex-col items-center">
-          <h1 className="text-[#00E5FF] text-6xl">Contact Us</h1>
+          <ShootingText text="Contact Us" className="text-6xl" type="chars"/>
           <form className="mt-15 flex flex-col gap-8 w-[400]">
             <div className="flex flex-col gap-2">
               <label className="text-[#00E5FF]">Name</label>

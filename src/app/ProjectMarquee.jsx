@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import ShootingText from "./ShootingText";
 
 export default function ProjectMarquee() {
   const [isClient, setIsClient] = useState(false);
@@ -25,10 +26,10 @@ export default function ProjectMarquee() {
   }
 
   return (
-    <div className="w-full h-auto flex flex-col justify-between items-center mt-50">
+    <div className="w-full h-auto flex flex-col justify-between items-center mt-50" id="projects">
       <style>{marqueeKeyframes}</style>
       
-      <h1 className="text-[#00E5FF] text-6xl tracking-wide">Projects</h1>
+      <ShootingText text="Projects" className="text-6xl" type="chars"/>
 
       <div className="relative w-full overflow-hidden mt-20 py-10">
         
